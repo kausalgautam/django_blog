@@ -1,8 +1,26 @@
+{% extends 'base.html' %}
 
+ {% load crispy_forms_tags %}
+ {% load static %}
+
+ {% block blogproblem %}
+ {% endblock %}
+ {% block body %}
 
 <form method = "POST" enctype="multipart/form-data">
 	{% csrf_token %}
-	{{form.as_p}}
-	<button>submit</button>
+	{{ form|crispy }}
+
+	
+	<br>
+	<button type="submit" class="btn btn-outline-success" style="height:50px;width:100px"  ><h3>Summit</h3></button>
+	<hr>
+
 </form>
 
+
+ {% endblock %}
+ {% block content1 %}
+ {% endblock %}
+ {% block content2 %}
+ {% endblock %}

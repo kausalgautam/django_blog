@@ -1,17 +1,40 @@
+{% extends 'base.html' %}
+
+ {% load crispy_forms_tags %}
+ {% load static %}
+
+ {% block blogproblem %}
+ {% endblock %}
+ {% block body %}
 
 
 
-
-  <h3>{{blogdetail.title}}</h3>
+ <div style = "position:relative; left:20px; top:2px; background-color:#efeae5;">
+         
+  <li><h1>{{blogdetail.title}}</h1></li>
+  <br>
 
   <img src="{{blogdetail.image.url}}">
-  <p>{{blogdetail.content}}</p>
+  <h3>{{blogdetail.content}}</h3>
   <hr>
-  <p>posted by:{{blogdetail.author}}</p>
-   <p>posted on :{{blogdetail.published}}</p>
+  <h3>posted by:{{blogdetail.author}}</h3>
+   <h3>posted on :{{blogdetail.published}}</h3>
 
-   <a href="/movie2/blog/{{blogdetail.id}}/update/">Update</a><hr>
-   <a href="/movie2/blog/{{blogdetail.id}}/delete/">Delete</a>
   
+
+    <a  href="/movie2/blog/{{blogdetail.id}}/update/">
+               <button type="button" class="btn btn-outline-success" >Update</button>
+             </a>
+
+    <a  href="/movie2/blog/{{blogdetail.id}}/delete/">
+               <button type="button" class="btn btn-outline-danger" >Delete</button>
+             </a>
   
- 
+      </div>
+
+  
+  {% endblock %}
+ {% block content1 %}
+ {% endblock %}
+ {% block content2 %}
+ {% endblock %}
