@@ -1,6 +1,7 @@
 from django.views.generic import *
 from  movie2.models import *
 from  movie2.forms import *
+from django.contrib import messages
 
 
 
@@ -20,7 +21,6 @@ class BlogCreateView(CreateView):
 	template_name = "blogcreate.html"
 	form_class =BlogForm
 	success_url='/movie2/blog/list/'
-
 
 class BlogUpdateView(UpdateView):
 	template_name = "blogcreate.html"

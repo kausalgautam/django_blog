@@ -119,9 +119,6 @@ USE_L10N = True
 USE_TZ = True
 
 
-# djang-heroku setting
-import django_heroku
-django_heroku.settings(locals())
 
 
 # static files settings
@@ -138,6 +135,8 @@ MEDIA_URL="/media/"
 MEDIA_ROOT=os.path.join(BASE_DIR,"media")
 
 CRISPY_TEMPLATE_PACK='bootstrap4'
+
+
 
 
 

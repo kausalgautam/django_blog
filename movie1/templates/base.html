@@ -89,6 +89,8 @@
       </div>
     </nav>
 {% endblock %}
+<br>
+{% include "partials/_message.html" %}
 
   
 
@@ -105,12 +107,12 @@
     </header>
      {% endblock %}
 
-  {% if messages %}
+ <!-- {% if messages %}
     {% for message in messages  %}
     <div class ="alert alert-{{message.tags}}">
       <h2>{{message}}</h2> 
       <a href="{% url 'movie1:index' %}"><h4>Home</h4></a>
-    </div>
+    </div>-->
 
      
 
