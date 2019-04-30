@@ -9,30 +9,25 @@
 
 
 
- <div class="jumbotron" style = "position:relative; left:20px; top:2px; background-color:#efeae5;">
+<div class="jumbotron" style = "position:relative; left:20px; top:2px; background-color:#efeae5;">
          
-  <li><h1>{{blogdetail.title}}</h1></li>
-  <br>
+  
+<div class="center" style ="text-align: center">
+  <h1><u>{{blogdetail.title}}</u></h1>>
+</div>
 
-  <img src="{{blogdetail.image.url}}">
-  <h3>{{blogdetail.content}}</h3>
   <hr>
-  <h3>posted by:{{blogdetail.author}}</h3>
-   <h3>posted on :{{blogdetail.published}}</h3>
+  <img src="{{blogdetail.image.url}}" class ='img-responsive'>
+  <hr>
+  <h2>{{blogdetail.content}}</h2>
+  <hr>
+  <h3>Posted by:<i>{{blogdetail.author}}</i></h3>
+  <h3>Posted on :<i>{{blogdetail.published}}</i></h3>
 
-  
+ <a  href="/movie2/blog/{{blogdetail.id}}/update/"><button type="button" class="btn btn-outline-success" >Update</button></a>
+ <a  href="/movie2/blog/{{blogdetail.id}}/delete/"><button type="button" class="btn btn-outline-danger" >Delete</button></a>
 
-    <a  href="/movie2/blog/{{blogdetail.id}}/update/">
-               <button type="button" class="btn btn-outline-success" >Update</button>
-             </a>
-
-    <a  href="/movie2/blog/{{blogdetail.id}}/delete/">
-               <button type="button" class="btn btn-outline-danger" >Delete</button>
-             </a>
-  
-      </div>
-
-  
+ </div>
   {% endblock %}
  {% block content1 %}
  {% endblock %}

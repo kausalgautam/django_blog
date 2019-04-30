@@ -7,19 +7,32 @@
  {% block blogproblem %}
  {% endblock %}
  {% block body %}
-<div class="jumbotron">
+
 
 <ul>
-	 <h1>Blog list</h1>
-    {% for blog in blogs %}
-   	<h2><li><a href="/movie2/blog/{{blog.id}}/detail/">{{ blog.title }}</a></li></h2>
-  	{% endfor %}
-</ul>
-<br>
-<h1>Create a blog</h1>
+	<h1>Create a blog</h1>
 <h2> <a  href="/movie2/blog/create/">
 <button type="button" class="btn btn-outline-success" >Create</button>
  </a></h2>
+ <hr>
+	 <h1>Blog list</h1>
+	<div class="container">
+        {% for blog in blogs %}
+        <hr>
+        <hr>
+         <img src='{{blog.image.url }}' class='img-responsive'>
+         <h2><li><a href="/movie2/blog/{{blog.id}}/detail/">{{ blog.title}} </a></li></h2>
+         <a href="/movie2/blog/{{blog.id}}/detail/" class ="btn-outline-primary" role="button"><h2>view</h2></a>
+          <h3>Posted by:<i>{{blog.author}}</i></h3>
+  <h3>Posted on </h3>:{{blog.published}}
+ {% endfor %}
+</div>
+       
+     
+	
+</ul>
+<br>
+
 </div>
 
   {% endblock %}
