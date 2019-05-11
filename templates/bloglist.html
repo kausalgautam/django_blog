@@ -4,12 +4,13 @@
  {% load crispy_forms_tags %}
  {% load static %}
 
- {% block blogproblem %}
- {% endblock %}
+ 
  {% block body %}
 
 
 <ul>
+	<hr>
+	<br><br><br>
 	<h1>Create a blog</h1>
 <h2> <a  href="/movie2/blog/create/">
 <button type="button" class="btn btn-outline-success" >Create</button>
@@ -24,7 +25,7 @@
          <h2><li><a href="/movie2/blog/{{blog.id}}/detail/">{{ blog.title}} </a></li></h2>
          <a href="/movie2/blog/{{blog.id}}/detail/" class ="btn-outline-primary" role="button"><h2>view</h2></a>
           <h3>Posted by:<i>{{blog.author}}</i></h3>
-  <h3>Posted on </h3>:{{blog.published}}
+  <h3>Posted on </h3>:{{blogproblem.published}}
  {% endfor %}
 </div>
        

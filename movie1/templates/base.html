@@ -8,7 +8,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
+  
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,9 +21,10 @@
     <link href="{% static 'movie1/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <!--<link href="{% static 'movie1/vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet"  type="text/css"> -->
+    <link href="{% static 'movie1/vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet"  type="text/css">
 
     <link href="{% static 'movie1/css/freelancer.min.css' %}" rel="stylesheet">
+
   </head>
 
   <style >
@@ -37,7 +38,8 @@
 }
   </style>
 
-  <body id="page-top" >
+
+
 
 
 {% block blogproblem %}
@@ -96,6 +98,18 @@
 
 
      {% block body %}
+     <script>
+
+  var txt;
+  if (confirm("Please login to have full escess to web!")) {
+  
+  } else {
+   
+  }
+  document.getElementById("demo").innerHTML = txt;
+
+</script>
+
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
       <div class="container">

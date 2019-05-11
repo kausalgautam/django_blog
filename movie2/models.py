@@ -24,3 +24,8 @@ class Blog(models.Model): #i have listed these data in 'post' thus object of thi
     def __str__(self):
         return self.title
 
+    class Meta:
+        
+
+         ordering = ['-created']
+
